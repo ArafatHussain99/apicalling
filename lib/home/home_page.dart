@@ -1,9 +1,8 @@
 import 'dart:convert';
 
-import 'package:api_calling_application/model.dart';
-import 'package:api_calling_application/searched_page.dart';
+import 'package:api_calling_application/movie_search/model/model.dart';
+import 'package:api_calling_application/movie_search/view/movie_searched_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var samplejson = [];
+  var movieList = [];
   final dio = Dio();
 
   TextEditingController _searchController = TextEditingController();

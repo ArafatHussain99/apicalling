@@ -1,28 +1,27 @@
 // To parse this JSON data, do
 //
-//     final sampleJson = sampleJsonFromJson(jsonString);
+//     final movieList = movieListFromJson(jsonString);
 
 import 'dart:convert';
 
-SampleJson sampleJsonFromJson(String str) =>
-    SampleJson.fromJson(json.decode(str));
+movieList movieListFromJson(String str) => movieList.fromJson(json.decode(str));
 
-String sampleJsonToJson(SampleJson data) => json.encode(data.toJson());
+String movieListToJson(movieList data) => json.encode(data.toJson());
 
-class SampleJson {
+class movieList {
   Type searchType;
   String expression;
   List<Result> results;
   String errorMessage;
 
-  SampleJson({
+  movieList({
     required this.searchType,
     required this.expression,
     required this.results,
     required this.errorMessage,
   });
 
-  factory SampleJson.fromJson(Map<String, dynamic> json) => SampleJson(
+  factory movieList.fromJson(Map<String, dynamic> json) => movieList(
         searchType: typeValues.map[json["searchType"]]!,
         expression: json["expression"],
         results:

@@ -1,5 +1,5 @@
-import 'package:api_calling_application/searched_page.dart';
 import 'package:flutter/material.dart';
+import 'package:api_calling_application/movie_search/view/movie_searched_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
