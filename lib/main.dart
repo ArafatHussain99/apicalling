@@ -1,4 +1,5 @@
 import 'package:api_calling_application/home/home_page.dart';
+import 'package:api_calling_application/movie_search/view/search_screen.dart';
 import 'package:api_calling_application/route.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: HomePage());
+    return const Scaffold(body: HomePage());
   }
 }

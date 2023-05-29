@@ -8,7 +8,6 @@ class MovieSearchController {
     try {
       final response = await dio
           .get('https://imdb-api.com/en/API/SearchMovie/k_s16v04m7/${string}');
-      print('https://imdb-api.com/en/API/SearchMovie/k_s16v04m7/${string}');
       if (response.statusCode == 200) {
         print(response);
         movieList = response.data['results'];

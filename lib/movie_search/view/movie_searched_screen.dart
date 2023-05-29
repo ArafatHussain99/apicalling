@@ -1,16 +1,16 @@
 import 'package:api_calling_application/movie_search/controller/movie_search_controller.dart';
 import 'package:flutter/material.dart';
 
-class SearchedPage extends StatefulWidget {
+class MovieResultPage extends StatefulWidget {
   static const String id = 'searched';
   final String search;
-  const SearchedPage({super.key, required this.search});
+  const MovieResultPage({super.key, required this.search});
 
   @override
-  State<SearchedPage> createState() => _SearchedPageState();
+  State<MovieResultPage> createState() => _MovieResultPageState();
 }
 
-class _SearchedPageState extends State<SearchedPage> {
+class _MovieResultPageState extends State<MovieResultPage> {
   var movieList = [];
   final MovieSearchController movieSearchController = MovieSearchController();
   late Future<List<dynamic>> listFuture;
